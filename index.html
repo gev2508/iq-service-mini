@@ -41,7 +41,88 @@ footer{text-align:center;padding:25px;color:#aaa;font-size:14px}
 <p>Телефон: +7 922 118-58-22</p>
 <a class="btn secondary" href="https://yandex.ru/maps/">Открыть карты</a>
 </div>
-</main>
+</main><section class="card" id="request">
+  <h2>📝 Заявка на ремонт</h2>
+  <p>Заполни форму, и мы свяжемся с тобой!</p>
+
+  <form id="repairForm">
+    <label for="clientName">Твоё имя</label>
+    <input id="clientName" required
+      placeholder="Как тебя зовут?">
+
+    <label for="clientPhone">Твой номер телефона</label>
+    <input id="clientPhone" type="tel" required
+      placeholder="+7 900 000-00-00">
+
+    <label for="device">Модель телефона</label>
+    <input id="device" required
+      placeholder="Например, iPhone 15">
+
+    <label for="problem">Что случилось?</label>
+    <textarea id="problem" required
+      placeholder="Опиши неисправность"></textarea>
+
+    <button class="btn" type="submit">
+      Отправить заявку в WhatsApp
+    </button>
+  </form>
+</section>
+
+<style>
+#repairForm label {
+  display: block;
+  margin-top: 16px;
+  color: #e5a16b;
+}
+#repairForm input,
+#repairForm textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #bd7948;
+  background: #151719;
+  color: white;
+  font-size: 16px;
+}
+#repairForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+#repairForm button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+</style>
+
+<script>
+document.getElementById('repairForm')
+.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name =
+    document.getElementById('clientName').value.trim();
+  const phone =
+    document.getElementById('clientPhone').value.trim();
+  const device =
+    document.getElementById('device').value.trim();
+  const problem =
+    document.getElementById('problem').value.trim();
+
+  const message =
+    'Здравствуйте! Заявка на ремонт IQ Service.%0A' +
+    'Имя: ' + encodeURIComponent(name) + '%0A' +
+    'Телефон: ' + encodeURIComponent(phone) + '%0A' +
+    'Устройство: ' + encodeURIComponent(device) + '%0A' +
+    'Неисправность: ' + encodeURIComponent(problem);
+
+  window.location.href =
+    'https://wa.me/79221185822?text=' + message;
+});
+</script>
 <footer>IQ Service © 2026</footer>
 </body>
 </html>
