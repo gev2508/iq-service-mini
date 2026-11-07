@@ -147,38 +147,49 @@ footer{text-align:center;padding:25px;color:#aaa;font-size:14px}
   cursor: pointer;
   font-size: 16px;
 }
-/* Зелёная кнопка WhatsApp */
-.whatsapp-btn {
-    background: #25D366;
-    color: #ffffff;
-    border: none;
-}
-/* Telegram — синий */
-.telegram-btn {
-    background: #229ED9;
-    color: #ffffff;
-    border: none;
+/* Ряд иконок приложений */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-/* WhatsApp — зелёный */
-.whatsapp-btn {
-    background: #25D366;
-    color: #ffffff;
-    border: none;
-}
-
-/* MAX — фиолетовый */
-.max-btn {
-    background: #8B5CF6;
-    color: #ffffff;
-    border: none;
-}
-/* ВКонтакте — синий */
+/* Маленькие иконки приложений */
+.whatsapp-btn,
+.telegram-btn,
+.max-btn,
 .vk-btn {
-    background: #0077FF;
-    color: #ffffff;
-    border: none;
-}  
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #242424;
+    border: 1px solid #bd8255;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+/* Размер изображений внутри иконок */
+.contact-icons img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+
+/* Эффект при нажатии */
+.whatsapp-btn:hover,
+.telegram-btn:hover,
+.max-btn:hover,
+.vk-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(189, 130, 85, 0.6);
+}
 </style>
 
 <script>
