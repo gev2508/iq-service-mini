@@ -191,7 +191,7 @@ document.getElementById('repairForm')
 
         const result = await response.json();
 
-        if (!response.ok || !result.ok) {
+        if (!response.ok || !result.success) {
             throw new Error('Не удалось отправить заявку');
         }
 
