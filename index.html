@@ -195,6 +195,73 @@ footer{text-align:center;padding:25px;color:#aaa;font-size:14px}
     transform: translateY(-4px);
     box-shadow: 0 0 15px rgba(189, 130, 85, 0.6);
 }
+/* IQ SERVICE — SOCIAL ICONS */
+
+.social-icons {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100%;
+  margin: 25px auto;
+}
+
+.social-icons .social-icon {
+  display: flex !important;
+  flex: 1 1 0 !important;
+  min-width: 0;
+  max-width: 85px;
+  height: 85px;
+  box-sizing: border-box;
+
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  background: #101114 !important;
+  border: 2px solid #bd8050 !important;
+  border-radius: 18px;
+
+  color: white !important;
+  text-decoration: none !important;
+
+  box-shadow: 0 0 15px rgba(255,145,60,.35);
+}
+
+.social-icons .icon {
+  display: block;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.social-icons .label {
+  display: block;
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.social-icons .whatsapp .icon { color: #25D366; }
+.social-icons .telegram .icon { color: #29A9EB; }
+.social-icons .max .icon { color: #A855F7; }
+.social-icons .vk .icon { color: #0077FF; }
+
+.social-icons .social-icon:active {
+  transform: scale(.94);
+}
+
+@media (max-width: 380px) {
+  .social-icons {
+    gap: 7px !important;
+  }
+
+  .social-icons .social-icon {
+    height: 72px;
+  }
+}
 </style>
 
 <script>
